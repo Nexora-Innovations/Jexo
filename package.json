@@ -4,16 +4,16 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "ts-node --esm migrateDatabase.mts && next start",
-    "lint": "next lint",
-    "prisma:generate": "prisma generate"
+    "build": "prisma generate && next build",
+    "start": "next start",
+    "postinstall": "prisma generate",
+    "lint": "next lint"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.1",
     "@inovua/reactdatagrid-community": "^5.6.1",
     "@popperjs/core": "^2.11.6",
-    "@prisma/client": "^6.5.0",
+    "@prisma/client": "6.19.3",
     "@radix-ui/react-tooltip": "^1.0.2",
     "@tabler/icons": "^1.101.0",
     "@tailwindcss/forms": "^0.5.3",
@@ -34,9 +34,9 @@
     "discord.js": "^14.7.1",
     "dotenv": "^16.0.3",
     "hex-rgb": "^5.0.0",
-    "iron-session": "6.3.1",
+    "iron-session": "6.5.1",
     "moment": "^2.29.4",
-    "next": "^12.3.2",
+    "next": "12.3.7",
     "next-remove-imports": "^1.0.8",
     "noblox.js": "^6.1.1",
     "node-cache": "^5.1.2",
@@ -50,8 +50,7 @@
     "recoil-nexus": "^0.4.0",
     "sass": "^1.56.1",
     "tailwind-merge": "^1.6.1",
-    "ts-node": "^10.9.1",
-    "uuid": "^3.4.0"
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@types/node": "18.7.16",
@@ -59,10 +58,10 @@
     "@types/react-dom": "18.0.6",
     "autoprefixer": "^10.4.8",
     "eslint": "8.23.0",
-    "eslint-config-next": "12.3.0",
+    "eslint-config-next": "12.3.7",
     "postcss": "^8.4.16",
-    "prisma": "^6.19.3",
+    "prisma": "6.19.3",
     "tailwindcss": "^3.1.8",
-    "typescript": "^6.0.3"
+    "typescript": "^5.4.0"
   }
 }
