@@ -1,4 +1,18 @@
-import { withIronSessionApiRoute, withIronSessionSsr } from "iron-session";
+import { getIronSession } from "iron-session";
+import type { IronSessionOptions } from "iron-session";
+import type { NextApiRequest, NextApiResponse } from "next";
+
+export const sessionOptions: IronSessionOptions = {
+  password: process.env.SECRET_COOKIE_PASSWORD as string,
+  cookieName: "tovy-session",
+  cookieOptions: {
+    secure: process.env.NODE_ENV === "production"
+  }
+};
+
+export async function getSession(req: NextApiRequest, res: NextApiResponse) {
+  return getIronSession(req, res, sessionOptions);
+}
 import * as crypto from "crypto";
 import {
   GetServerSidePropsContext,
