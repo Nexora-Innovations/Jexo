@@ -1,4 +1,4 @@
-import { withIronSessionApiRoute, withIronSessionSsr } from "iron-session/next";
+import { withIronSessionApiRoute, withIronSessionSsr } from "iron-session";
 import * as crypto from "crypto";
 import {
   GetServerSidePropsContext,
