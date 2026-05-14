@@ -1,5 +1,6 @@
-import { getIronSession, withIronSessionApiRoute, withIronSessionSsr } from "iron-session";
+import { getIronSession } from "iron-session";
 import type { IronSessionOptions } from "iron-session";
+import { withIronSessionApiRoute, withIronSessionSsr } from "iron-session/next";
 import * as crypto from "crypto";
 import type { NextApiRequest, NextApiResponse } from "next";
 import type {
