@@ -1,42 +1,34 @@
-import { getIronSession } from "iron-session";
+import { getIronSession, withIronSessionApiRoute, withIronSessionSsr } from "iron-session";
 import type { IronSessionOptions } from "iron-session";
-import type { NextApiRequest, NextApiResponse } from "next";
-
-export const sessionOptions: IronSessionOptions = {
-  password: process.env.SECRET_COOKIE_PASSWORD as string,
-  cookieName: "tovy-session",
-  cookieOptions: {
-    secure: process.env.NODE_ENV === "production"
-  }
-};
-
-export async function getSession(req: NextApiRequest, res: NextApiResponse) {
-  return getIronSession(req, res, sessionOptions);
-}
 import * as crypto from "crypto";
-import {
+import type { NextApiRequest, NextApiResponse } from "next";
+import type {
   GetServerSidePropsContext,
   GetServerSidePropsResult,
   NextApiHandler,
 } from "next";
 
-const code = process.env.SESSION_SECRET || crypto.randomBytes(32).toString("hex");
+const password =
+  process.env.SECRET_COOKIE_PASSWORD ||
+  process.env.SESSION_SECRET ||
+  crypto.randomBytes(32).toString("hex");
 
-
-const sessionOptions = {
-  password: code, 
-  cookieName: "tovy_session",
-  // secure: true should be used in production (HTTPS) but can't be used in development (HTTP)
+export const sessionOptions: IronSessionOptions = {
+  password,
+  cookieName: "tovy-session",
   cookieOptions: {
-    secure: process.env.NODE_ENV === 'production',
-  }
+    secure: process.env.NODE_ENV === "production",
+  },
 };
+
+export async function getSession(req: NextApiRequest, res: NextApiResponse) {
+  return getIronSession(req, res, sessionOptions);
+}
 
 export function withSessionRoute(handler: NextApiHandler) {
   return withIronSessionApiRoute(handler, sessionOptions);
 }
 
-// Theses types are compatible with InferGetStaticPropsType https://nextjs.org/docs/basic-features/data-fetching#typescript-use-getstaticprops
 export function withSessionSsr<
   P extends { [key: string]: unknown } = { [key: string]: unknown },
 >(
