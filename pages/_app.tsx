@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import Router from "next/router";
 import Head from "next/head";
 import axios from "axios";
+import HelpWidget from "@/components/helpwidget";
 import {
 	Chart as ChartJS,
 	CategoryScale,
@@ -103,5 +104,6 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 		</RecoilRoot>
 	);
 }
+        <HelpWidget />
 
 export default MyApp;
