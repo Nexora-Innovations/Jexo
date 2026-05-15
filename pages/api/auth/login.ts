@@ -1,4 +1,4 @@
-//logout of tovy
+//logout of Jex
 
 import { NextApiRequest, NextApiResponse } from "next";
 import { withSessionRoute } from '@/lib/withSession'
@@ -52,7 +52,7 @@ export async function handler(
 	await req.session?.save()
 
 
-	const tovyuser: User = {
+	const Jexuser: User = {
 		userId: req.session.userid,
 		username: await getUsername(req.session.userid),
 		displayname: await getDisplayName(req.session.userid),
@@ -69,5 +69,5 @@ export async function handler(
 		}
 	}
 
-	res.status(200).json({ success: true, user: tovyuser, workspaces: roles })
+	res.status(200).json({ success: true, user: Jexuser, workspaces: roles })
 }

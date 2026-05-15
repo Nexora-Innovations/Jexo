@@ -1,4 +1,4 @@
-//logout of tovy
+//logout of Jex
 
 import { NextApiRequest, NextApiResponse } from "next";
 import { withSessionRoute } from '@/lib/withSession'

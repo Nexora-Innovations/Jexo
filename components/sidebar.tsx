@@ -108,7 +108,7 @@ const Topbar: NextPage = () => {
 							<Menu.Item>
 								{({ active }) => (
 									<a
-										className={`${active ? "bg-tovybg text-white" : "text-gray-700 dark:text-white"
+										className={`${active ? "bg-Jexbg text-white" : "text-gray-700 dark:text-white"
 											}  px-3 py-2 text-sm rounded-md m-1 mb-0 font-medium flex flex-row cursor-pointer`}
 										onClick={() => router.push(`/workspace/${workspace.groupId}/profile/${login.userId}`)}
 									>
@@ -122,7 +122,7 @@ const Topbar: NextPage = () => {
 									<Menu.Item>
 										{({ active }) => (
 											<a
-											className={`${active ? "bg-tovybg text-white" : "text-gray-700 dark:text-white"
+											className={`${active ? "bg-Jexbg text-white" : "text-gray-700 dark:text-white"
 												}  px-3 py-2 text-sm rounded-md m-1 mb-0 font-medium flex flex-row cursor-pointer`}
 											>
 												<IconSettings size={22} className="inline-block" />
@@ -135,7 +135,7 @@ const Topbar: NextPage = () => {
 							<Menu.Item>
 								{({ active }) => (
 									<a
-										className={`${active ? "bg-tovybg text-white" : "text-gray-700 dark:text-white"
+										className={`${active ? "bg-Jexbg text-white" : "text-gray-700 dark:text-white"
 											}  px-3 py-2 text-sm rounded-md m-1 mb-0 font-medium flex flex-row cursor-pointer`}
 										onClick={() => logout()}
 									>
@@ -219,7 +219,7 @@ const Topbar: NextPage = () => {
 					)
 				))}
 			</div>
-			<a className="fixed bottom-0 pl-3 pb-3 text-gray-400 hover:underline cursor-pointer hover:text-blue-600 transition " href="https://tovyblox.xyz"> © Tovy 2022 </a>
+			<a className="fixed bottom-0 pl-3 pb-3 text-gray-400 hover:underline cursor-pointer hover:text-blue-600 transition " href="https://Jexblox.xyz"> © Jex 2022 </a>
 		</div>
 	);
 };

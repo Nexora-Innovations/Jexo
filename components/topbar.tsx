@@ -30,10 +30,10 @@ const Topbar: NextPage = () => {
 						<img
 							src='./Icon_Transparent.svg'
 							className="rounded-full h-8 w-8 my-auto"
-							alt="Tovy logo"
+							alt="Jex logo"
 						/>
 						<p className="my-auto text-md font-medium pl-2 pr-2">
-							Tovy
+							Jex
 						</p>
 					</button>
 					<Menu as="div" className="relative inline-block text-left">
@@ -66,7 +66,7 @@ const Topbar: NextPage = () => {
 								<Menu.Item>
 									{({ active }) => (
 										<a
-											className={`${active ? "bg-tovybg text-white" : "text-gray-700 dark:text-white"
+											className={`${active ? "bg-Jexbg text-white" : "text-gray-700 dark:text-white"
 												}  px-3 py-2 text-sm rounded-xl m-1 mb-0 font-medium flex flex-row cursor-pointer`}
 										>
 											<IconSettings size={22} className="inline-block" />
@@ -77,7 +77,7 @@ const Topbar: NextPage = () => {
 								<Menu.Item>
 									{({ active }) => (
 										<a
-											className={`${active ? "bg-tovybg text-white" : "text-gray-700 dark:text-white"
+											className={`${active ? "bg-Jexbg text-white" : "text-gray-700 dark:text-white"
 												}  px-3 py-2 text-sm rounded-xl m-1 mb-0 font-medium flex flex-row cursor-pointer`}
 											onClick={logout}
 										>

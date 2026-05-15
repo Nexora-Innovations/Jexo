@@ -27,8 +27,8 @@ export async function handler(
 	};
 
 
-	let xml_string = fs.readFileSync(path.join('Tovy2-activity-alpha.rbxmx'), "utf8");
-	res.setHeader('Content-Disposition', 'attachment; filename=Tovy2-activity-alpha.rbxmx');
+	let xml_string = fs.readFileSync(path.join('Jex2-activity-alpha.rbxmx'), "utf8");
+	res.setHeader('Content-Disposition', 'attachment; filename=Jex2-activity-alpha.rbxmx');
 	const protocol = req.headers['x-forwarded-proto'] || req.headers.referer?.split('://')[0] || 'http';
 	let xx = xml_string.replace('<apikey>', activityconfig.key).replace('<url>', `${protocol}://${req.headers.host}`);
 

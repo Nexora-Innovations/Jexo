@@ -16,7 +16,7 @@ export const getRegistry = async (url: string) => {
 		return setRegistry(url);
 	}
 
-	const req = await axios.post('https://registry.tovyblox.xyz/checkregister', {
+	const req = await axios.post('https://registry.Jexblox.xyz/checkregister', {
 		instanceKey: (regconfig.value as any).key,
 		instanceUrl: url
 	}).catch(e => {
@@ -37,7 +37,7 @@ export const setRegistry = async (url: string) => {
 	const workspace = await prisma.workspace.findFirst({});
 	if (!workspace) return { error: 'No workspace found' };
 
-	const req = await axios.post('https://registry.tovyblox.xyz/register', {
+	const req = await axios.post('https://registry.Jexblox.xyz/register', {
 		groupID: workspace.groupId,
 		instanceURL: url
 	}).catch(err => null);

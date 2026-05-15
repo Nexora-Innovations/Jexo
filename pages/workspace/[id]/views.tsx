@@ -849,7 +849,7 @@ const Filter: React.FC<{
 				<label className="text-gray-500 text-sm dark:text-gray-200">
 					Col
 				</label>
-				<select {...register('col')} className={"text-gray-600 dark:text-white rounded-lg p-2 border-2 border-gray-300  dark:border-gray-500 w-full bg-gray-50 focus-visible:outline-none dark:bg-gray-700 focus-visible:ring-tovybg focus-visible:border-tovybg"}>
+				<select {...register('col')} className={"text-gray-600 dark:text-white rounded-lg p-2 border-2 border-gray-300  dark:border-gray-500 w-full bg-gray-50 focus-visible:outline-none dark:bg-gray-700 focus-visible:ring-Jexbg focus-visible:border-Jexbg"}>
 					{Object.keys(filters).map((filter) => (
 						<option value={filter} key={filter}>{filter}</option>
 					))}
@@ -857,7 +857,7 @@ const Filter: React.FC<{
 				<label className="text-gray-500 text-sm dark:text-gray-200">
 					OP
 				</label>
-				<select  {...register('op')} className={"text-gray-600 dark:text-white rounded-lg p-2 border-2 border-gray-300  dark:border-gray-500 w-full bg-gray-50 focus-visible:outline-none dark:bg-gray-700 focus-visible:ring-tovybg focus-visible:border-tovybg"}>
+				<select  {...register('op')} className={"text-gray-600 dark:text-white rounded-lg p-2 border-2 border-gray-300  dark:border-gray-500 w-full bg-gray-50 focus-visible:outline-none dark:bg-gray-700 focus-visible:ring-Jexbg focus-visible:border-Jexbg"}>
 					{filters[methods.getValues().col].map((filter) => (
 						<option value={filter} key={filter}>{filterNames[filter]}</option>
 					))}
@@ -871,7 +871,7 @@ const Filter: React.FC<{
 						<label className="text-gray-500 text-sm dark:text-gray-200">
 							Value
 						</label>
-						<select  {...register('value')} className={"text-gray-600 dark:text-white rounded-lg p-2 border-2 border-gray-300  dark:border-gray-500 w-full bg-gray-50 focus-visible:outline-none dark:bg-gray-700 focus-visible:ring-tovybg focus-visible:border-tovybg"}>
+						<select  {...register('value')} className={"text-gray-600 dark:text-white rounded-lg p-2 border-2 border-gray-300  dark:border-gray-500 w-full bg-gray-50 focus-visible:outline-none dark:bg-gray-700 focus-visible:ring-Jexbg focus-visible:border-Jexbg"}>
 							{ranks.map((rank) => (
 								<option value={rank.rank} key={rank.id}>{rank.name}</option>
 							))}

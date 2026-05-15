@@ -48,7 +48,7 @@ export async function handler(
 		canMakeWorkspace: dbuser?.isOwner || false,
 		thumbnail: await getThumbnail(req.session.userid)
 	}
-	const tovyuser = await prisma.user.findUnique({
+	const Jexuser = await prisma.user.findUnique({
 		where: {
 			userid: req.session.userid
 		},
@@ -57,8 +57,8 @@ export async function handler(
 		}
 	})
 	let roles: any[] = [];
-	if (tovyuser?.roles.length) {
-		for (const role of tovyuser.roles) {
+	if (Jexuser?.roles.length) {
+		for (const role of Jexuser.roles) {
 			roles.push({
 				groupId: role.workspaceGroupId,
 				groupThumbnail: await noblox.getLogo(role.workspaceGroupId),

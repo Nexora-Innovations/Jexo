@@ -5,7 +5,7 @@
 <div>
   <div align="center">
     <img height="250px" src=".github/logo.png"></img>
-    <h1>Tovy, a staff management system for Roblox groups</h1>
+    <h1>Jex, a staff management system for Roblox groups</h1>
   </div>
   <ul>
     <li><a href="#about">About</a></li>
@@ -15,7 +15,7 @@
   </ul>
   <h2>About</h2>
   <p>
-    Tovy is an open source staff management platform inspired by Hyra. It allows Roblox groups to manage their group members in a more intuitive and powerful way, while still being simple to use.
+    Jex is an open source staff management platform inspired by Hyra. It allows Roblox groups to manage their group members in a more intuitive and powerful way, while still being simple to use.
   </p>
   <h2>Why consider</h2>
   <ul>
@@ -35,16 +35,16 @@
           Track your members' group activity
         </li>
         <li>
-          Automate things with Tovy (soon)
+          Automate things with Jex (soon)
         </li>
         <li>
           Warn, promote, demote, and way more to your members
         </li>
         <li>
-          Communicate with your members directly in Tovy
+          Communicate with your members directly in Jex
         </li>
 		<li>
-          Host your docs with Tovy
+          Host your docs with Jex
         </li>
 		<li>
           Assign your staff activity requirements (soon)
@@ -66,17 +66,17 @@
   </ul>
   <h2>Don't want to host yourself?</h2>
     <p>
-    Tovy has a service dedicated to providing Tovy hosting at a low price per month. -- <a href="https://tovyblox.xyz/">Find out more!</a>
+    Jex has a service dedicated to providing Jex hosting at a low price per month. -- <a href="https://Jexblox.xyz/">Find out more!</a>
   </p>
   <h2>Quicklinks</h2>
   <ul>
     <li>
-      Don't know how to install? –– <a href="https://docs.tovyblox.xyz/">Visit our documentation!</a>
+      Don't know how to install? –– <a href="https://docs.Jexblox.xyz/">Visit our documentation!</a>
     </li>
     <li>
-      🐛 Bugs? ✨ Suggestions? –– <a href="https://feedback.tovyblox.xyz/">Let us know here!</a>
+      🐛 Bugs? ✨ Suggestions? –– <a href="https://feedback.Jexblox.xyz/">Let us know here!</a>
     </li>
   </ul>
   <h2>License</h2>
-  Tovy is licensed under the <a href="./LICENSE">GNU General Public License v3.0.</a>
+  Jex is licensed under the <a href="./LICENSE">GNU General Public License v3.0.</a>
 </div>

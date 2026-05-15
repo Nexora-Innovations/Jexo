@@ -28,4 +28,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           project: k4jd8wncsg
           push: true
-          tags: itswhooop/tovy:latest
+          tags: itswhooop/Jex:latest

@@ -230,7 +230,7 @@ const Notices: pageWithLayout<pageProps> = (props) => {
 										))}
 										<p className="text-gray-500 mt-2">Quota type</p>
 										<form onSubmit={handleSubmit(onSubmit)}>
-											<select  {...register('type')} className={"text-gray-600 dark:text-white rounded-lg p-2 mb-2 border-2 border-gray-300  dark:border-gray-500 w-full bg-gray-50 focus-visible:outline-none dark:bg-gray-700 focus-visible:ring-tovybg focus-visible:border-tovybg"}>
+											<select  {...register('type')} className={"text-gray-600 dark:text-white rounded-lg p-2 mb-2 border-2 border-gray-300  dark:border-gray-500 w-full bg-gray-50 focus-visible:outline-none dark:bg-gray-700 focus-visible:ring-Jexbg focus-visible:border-Jexbg"}>
 												<option value='sessions_hosted'>Sessions Hosted</option>
 												<option value='sessions_attended'>Sessions Slots Claimed</option>
 												<option value='mins'>Minutes in game</option>
