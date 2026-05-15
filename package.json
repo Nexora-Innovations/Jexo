@@ -1,6 +1,6 @@
 {
-  "name": "orbit",
-  "version": "2.1.10beta9",
+  "name": "jex",
+  "version": "1.0.0",
   "private": true,
   "packageManager": "pnpm@10.18.2",
   "engines": {
@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.19",
-    "@tabler/icons": "^1.119.0",
+    "@tabler/icons-react": "^3.31.0",
     "@tailwindcss/forms": "^0.5.11",
     "@tailwindcss/typography": "^0.5.19",
     "@tanstack/react-table": "^8.21.3",
