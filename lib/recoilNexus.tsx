@@ -1,40 +1,39 @@
 // Inlined from recoil-nexus@0.4.0 — avoids the unresolvable npm package.
-// Only RecoilNexus (component) and setRecoil are used in this project,
-// but the full API is preserved for completeness.
 import { useRecoilCallback, RecoilState } from "recoil";
 
 type ValOrUpdater<T> = T | ((currVal: T) => T);
 
+// Internal storage uses `any` — generics live on the exported functions below.
 const nexus: {
-  get?: <T,>(atom: RecoilState<T>) => T;
-  getPromise?: <T,>(atom: RecoilState<T>) => Promise<T>;
-  set?: <T,>(atom: RecoilState<T>, valOrUpdater: ValOrUpdater<T>) => void;
-  reset?: <T,>(atom: RecoilState<T>) => void;
+  get?: (atom: RecoilState<any>) => any;
+  getPromise?: (atom: RecoilState<any>) => Promise<any>;
+  set?: (atom: RecoilState<any>, valOrUpdater: any) => void;
+  reset?: (atom: RecoilState<any>) => void;
 } = {};
 
 export default function RecoilNexus() {
   nexus.get = useRecoilCallback(
     ({ snapshot }) =>
-      <T,>(atom: RecoilState<T>) =>
+      (atom: RecoilState<any>) =>
         snapshot.getLoadable(atom).contents,
     [],
   );
   nexus.getPromise = useRecoilCallback(
     ({ snapshot }) =>
-      <T,>(atom: RecoilState<T>) =>
+      (atom: RecoilState<any>) =>
         snapshot.getPromise(atom),
     [],
   );
   nexus.set = useRecoilCallback(
     ({ transact_UNSTABLE }) =>
-      <T,>(atom: RecoilState<T>, valOrUpdater: ValOrUpdater<T>) => {
+      (atom: RecoilState<any>, valOrUpdater: any) => {
         transact_UNSTABLE(({ set }) => set(atom, valOrUpdater));
       },
     [],
   );
   nexus.reset = useRecoilCallback(
     ({ reset }) =>
-      <T,>(atom: RecoilState<T>) =>
+      (atom: RecoilState<any>) =>
         reset(atom),
     [],
   );
