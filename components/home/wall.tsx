@@ -7,7 +7,7 @@ import moment from "moment";
 import Button from "@/components/button";
 import type { wallPost, user } from "@/utils/database";
 import { useRouter } from "next/router";
-import { IconChevronRight } from '@tabler/icons'
+import { IconChevronRight } from '@tabler/icons-react'
 
 
 const Color: React.FC = () => {

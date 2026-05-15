@@ -6,7 +6,7 @@ import { workspacestate } from "@/state";
 import Button from "@/components/button";
 import type { Session, user } from "@/utils/database";
 import { useRouter } from "next/router";
-import { IconChevronRight } from '@tabler/icons'
+import { IconChevronRight } from '@tabler/icons-react'
 import { getThumbnail } from "@/utils/userinfoEngine";
 
 
