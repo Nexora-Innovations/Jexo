@@ -20,14 +20,14 @@ export const sessionOptions: IronSessionOptions = {
   },
 };
 
-// getIronSession in v6 both returns the session and attaches it to req.session
+// getIronSession returns the session object — must be explicitly assigned to req.session
 export async function getSession(req: NextApiRequest, res: NextApiResponse) {
   return getIronSession(req, res, sessionOptions);
 }
 
 export function withSessionRoute(handler: NextApiHandler) {
   return async (req: NextApiRequest, res: NextApiResponse) => {
-    await getIronSession(req, res, sessionOptions);
+    req.session = await getIronSession(req, res, sessionOptions);
     return handler(req, res);
   };
 }
@@ -40,7 +40,7 @@ export function withSessionSsr<
   ) => GetServerSidePropsResult<P> | Promise<GetServerSidePropsResult<P>>,
 ) {
   return async (context: GetServerSidePropsContext) => {
-    await getIronSession(context.req, context.res, sessionOptions);
+    context.req.session = await getIronSession(context.req, context.res, sessionOptions);
     return handler(context);
   };
 }
