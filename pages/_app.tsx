@@ -3,8 +3,8 @@ import type { AppProps } from "next/app";
 import { loginState } from "@/state";
 import { RecoilRoot } from "recoil";
 import { pageWithLayout } from "@/layoutTypes";
-import RecoilNexus from "recoil-nexus";
-import { setRecoil } from "recoil-nexus";
+
+import RecoilNexus, { setRecoil } from "@/lib/recoilNexus";
 import { useEffect, useState } from "react";
 import Router from "next/router";
 import Head from "next/head";
@@ -72,7 +72,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 	return (
 		<RecoilRoot>
 			<Head>
-				<title>Jex</title>
+				<title>Tovy</title>
 			</Head>
 			<RecoilNexus />
 			{!loading && (

@@ -14,7 +14,7 @@ const password =
 
 export const sessionOptions: IronSessionOptions = {
   password,
-  cookieName: "Jex-session",
+  cookieName: "tovy-session",
   cookieOptions: {
     secure: process.env.NODE_ENV === "production",
   },
