@@ -20,14 +20,38 @@ export const sessionOptions: IronSessionOptions = {
   },
 };
 
-// getIronSession returns the session object — must be explicitly assigned to req.session
+// Ported directly from iron-session/next/index.js — plain assignment doesn't
+// work because the property needs a paired getter+setter to proxy mutations
+// back into the sealed session object.
+function getPropertyDescriptorForReqSession(session: any): PropertyDescriptor {
+  return {
+    enumerable: true,
+    get() {
+      return session;
+    },
+    set(value: any) {
+      const keys = Object.keys(value);
+      const currentKeys = Object.keys(session);
+      currentKeys.forEach((key) => {
+        if (!keys.includes(key)) {
+          delete session[key];
+        }
+      });
+      keys.forEach((key) => {
+        session[key] = value[key];
+      });
+    },
+  };
+}
+
 export async function getSession(req: NextApiRequest, res: NextApiResponse) {
   return getIronSession(req, res, sessionOptions);
 }
 
 export function withSessionRoute(handler: NextApiHandler) {
-  return async (req: NextApiRequest, res: NextApiResponse) => {
-    req.session = await getIronSession(req, res, sessionOptions);
+  return async function (req: NextApiRequest, res: NextApiResponse) {
+    const session = await getIronSession(req, res, sessionOptions);
+    Object.defineProperty(req, "session", getPropertyDescriptorForReqSession(session));
     return handler(req, res);
   };
 }
@@ -39,8 +63,9 @@ export function withSessionSsr<
     context: GetServerSidePropsContext,
   ) => GetServerSidePropsResult<P> | Promise<GetServerSidePropsResult<P>>,
 ) {
-  return async (context: GetServerSidePropsContext) => {
-    context.req.session = await getIronSession(context.req, context.res, sessionOptions);
+  return async function (context: GetServerSidePropsContext) {
+    const session = await getIronSession(context.req, context.res, sessionOptions);
+    Object.defineProperty(context.req, "session", getPropertyDescriptorForReqSession(session));
     return handler(context);
   };
 }
