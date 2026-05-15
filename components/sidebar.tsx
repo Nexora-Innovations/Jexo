@@ -219,7 +219,7 @@ const Topbar: NextPage = () => {
 					)
 				))}
 			</div>
-			<a className="fixed bottom-0 pl-3 pb-3 text-gray-400 hover:underline cursor-pointer hover:text-blue-600 transition " href="https://Jexblox.xyz"> © Jex 2022 </a>
+			<a className="fixed bottom-0 pl-3 pb-3 text-gray-400 hover:underline cursor-pointer hover:text-blue-600 transition " href="https://Jexblox.xyz"> © Jex 2026 </a>
 		</div>
 	);
 };
