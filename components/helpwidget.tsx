@@ -68,6 +68,7 @@ const HelpWidget = () => {
           description: bugDescription,
           severity: bugSeverity,
           page: typeof window !== "undefined" ? window.location.pathname : undefined,
+          username: login.username ?? undefined,
         }),
       });
       const data = await res.json();
@@ -96,9 +97,6 @@ const HelpWidget = () => {
     }
   }, [showChangelog, changelogItems.length]);
 
-	function clsx(...classes: (string | undefined | null | false)[]): string {
-		return classes.filter(Boolean).join(" ");
-	}
   return (
     <>
       <Popover
@@ -125,18 +123,18 @@ const HelpWidget = () => {
           <Popover.Panel className="absolute bottom-14 md:bottom-16 right-0 w-64 origin-bottom-right rounded-xl bg-white dark:bg-zinc-800 shadow-xl ring-1 ring-black dark:ring-zinc-700 ring-opacity-5 focus:outline-none">
             <div className="p-4">
               <div className="flex items-center gap-3 mb-4 pb-3 border-b border-zinc-200 dark:border-zinc-700">
-                <img src="/logo.png" alt="Firefli" className="h-8 w-auto dark:hidden" />
-				<img src="/wlogo.png" alt="Firefli" className="h-8 w-auto hidden dark:block" />
+                <img src="/public/favicon-16x16.png" alt="Jex" className="h-8 w-auto dark:hidden" />
+				<img src="/wlogo.png" alt="Jex" className="h-8 w-auto hidden dark:block" />
                 <div className="flex-1">
                   <p className="text-sm font-semibold text-zinc-900 dark:text-white">
-                    Firefli
+                    Jex
                   </p>
                   <div className="flex items-center gap-2">
                     <p className="text-xs text-zinc-500 dark:text-zinc-400">
                       v{packageJson.version}
                     </p>
                     <a
-                      href="https://buymeacoffee.com/teamfirefli"
+                      href="https://buymeacoffee.com/teamJex"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center w-5 h-5 rounded hover:bg-zinc-100 dark:hover:bg-zinc-700 transition-colors"
@@ -149,7 +147,7 @@ const HelpWidget = () => {
               </div>
               <div className="space-y-1">
                 <a
-                  href="https://docs.firefli.net"
+                  href="https://docs.Jex.net"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-700 transition-colors text-zinc-700 dark:text-zinc-200"
@@ -158,7 +156,7 @@ const HelpWidget = () => {
                   <span className="text-sm">Documentation</span>
                 </a>
                 <a
-                  href="https://github.com/TeamFirefli/firefli"
+                  href="https://github.com/Nexora-Innovations/Jexo"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-700 transition-colors text-zinc-700 dark:text-zinc-200"
@@ -176,7 +174,7 @@ const HelpWidget = () => {
                   </button>
                 ) : (
                   <a
-                    href="https://feedback.firefli.net/bugs"
+                    href="https://feedback.Jex.net/bugs"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-700 transition-colors text-zinc-700 dark:text-zinc-200"
@@ -392,10 +390,10 @@ const HelpWidget = () => {
 
                     <div>
                       <h3 className="text-sm font-medium text-zinc-900 dark:text-white mb-1">
-                        Firefli features, enhancements, and modifications:
+                        Jex features, enhancements, and modifications:
                       </h3>
                       <p className="text-sm text-zinc-500 dark:text-zinc-400">
-                        Copyright © 2026 Firefli. All rights reserved.
+                        Copyright © 2026 Jex. All rights reserved.
                       </p>
                     </div>
 
@@ -500,7 +498,7 @@ const HelpWidget = () => {
 
                   <div className="mt-6 flex justify-between items-center">
                     <a
-                      href="https://feedback.firefli.net/changelog"
+                      href="https://feedback.Jex.net/changelog"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-sm text-zinc-600 dark:text-zinc-300 hover:underline"
