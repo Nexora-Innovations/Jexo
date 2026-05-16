@@ -1,15 +1,19 @@
 /** @type {import('next').NextConfig} */
+const path = require('path');
+
 const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: ['tr.rbxcdn.com']
   },
   webpack: (config) => {
-    // @tabler/icons v1 has a broken exports field that omits the root path,
-    // causing webpack 5 to refuse to bundle it. This alias bypasses that by
-    // pointing directly to the compiled ESM output.
-    config.resolve.alias['@tabler/icons'] = require.resolve(
-      '@tabler/icons/icons-react/dist/index.esm.js'
+    // @tabler/icons v1 exports field maps `./*` to `./icons/*` (SVG files),
+    // so any subpath import gets redirected to a non-existent location.
+    // path.resolve bypasses the exports field entirely and points webpack
+    // directly at the compiled React components.
+    config.resolve.alias['@tabler/icons'] = path.resolve(
+      __dirname,
+      'node_modules/@tabler/icons/icons-react/dist/index.esm.js'
     );
     return config;
   },
