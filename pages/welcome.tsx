@@ -68,8 +68,8 @@ const Login: NextPage = ({ }) => {
 		"bg-gray-500",
 	];
 	return (
-		<div className="flex bg-infobg h-screen bg-no-repeat bg-cover bg-center">
-			<p className="text-md -mt-1 text-white absolute top-4 left-4 xs:hidden md:text-6xl font-extrabold">
+<div className="flex bg-blue-500 h-screen 
+bg-no-repeat bg-cover bg-center">			<p className="text-md -mt-1 text-white absolute top-4 left-4 xs:hidden md:text-6xl font-extrabold">
 				Welcome <br /> to <span className="text-[#2196f3] "> Jex </span>
 			</p>
 			<Slider activeSlide={selectedSlide}>
