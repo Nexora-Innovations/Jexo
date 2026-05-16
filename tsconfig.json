@@ -16,8 +16,7 @@
     "baseUrl": ".",
     "incremental": true,
     "paths": {
-      "@/*": ["*"],
-      "@tabler/icons": ["./node_modules/@tabler/icons/icons-react"]
+      "@/*": ["*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
