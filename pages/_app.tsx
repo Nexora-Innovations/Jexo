@@ -101,9 +101,8 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 					</svg>
 				</div>
 			)}
+			<HelpWidget />
 		</RecoilRoot>
 	);
 }
-        <HelpWidget />
-
 export default MyApp;
