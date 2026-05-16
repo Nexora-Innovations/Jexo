@@ -153,7 +153,7 @@ const HelpWidget = () => {
                   className="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-700 transition-colors text-zinc-700 dark:text-zinc-200"
                 >
                   <IconBook className="w-4 h-4 text-zinc-500" />
-                  <span className="text-sm">Documentation </span>
+                  <span className="text-sm">Documentation</span>
                 </a>
                 <a
                   href="https://github.com/Nexora-Innovations/Jexo"
