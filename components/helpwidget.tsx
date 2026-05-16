@@ -123,7 +123,7 @@ const HelpWidget = () => {
           <Popover.Panel className="absolute bottom-14 md:bottom-16 right-0 w-64 origin-bottom-right rounded-xl bg-white dark:bg-zinc-800 shadow-xl ring-1 ring-black dark:ring-zinc-700 ring-opacity-5 focus:outline-none">
             <div className="p-4">
               <div className="flex items-center gap-3 mb-4 pb-3 border-b border-zinc-200 dark:border-zinc-700">
-                <img src="/public/favicon-16x16.png" alt="Jex" className="h-8 w-auto dark:hidden" />
+                <img src="https://jexo.vercel.app/favicon-32x32.png" alt="Jex" className="h-8 w-auto dark:hidden" />
 				<img src="/wlogo.png" alt="Jex" className="h-8 w-auto hidden dark:block" />
                 <div className="flex-1">
                   <p className="text-sm font-semibold text-zinc-900 dark:text-white">
@@ -180,11 +180,11 @@ const HelpWidget = () => {
                     className="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-700 transition-colors text-zinc-700 dark:text-zinc-200"
                   >
                     <IconBug className="w-4 h-4 text-zinc-500" />
-                    <span className="text-sm">Bug Reports</span>
+                    <span className="text-sm">Bug Reports (Coming Soon!)</span>
                   </a>
                 )}
                 <a
-                  href="https://discord.gg/WtEkchUKqe"
+                  href="https://discord.gg/SqygYW84TC"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-700 transition-colors text-zinc-700 dark:text-zinc-200"
@@ -515,7 +515,7 @@ We just Released we are currently cooking this! Stay tuned!
                       rel="noopener noreferrer"
                       className="text-sm text-zinc-600 dark:text-zinc-300 hover:underline"
                     >
-                      View full changelog
+                      View full changelog (Coming Soon!)
                     </a>
                     <button
                       type="button"
