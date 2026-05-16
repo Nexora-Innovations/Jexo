@@ -124,7 +124,7 @@ const HelpWidget = () => {
             <div className="p-4">
               <div className="flex items-center gap-3 mb-4 pb-3 border-b border-zinc-200 dark:border-zinc-700">
                 <img src="https://raw.githubusercontent.com/Nexora-Innovations/Jexo/refs/heads/main/.github/logo.png" alt="Jex" className="h-8 w-auto dark:hidden" />
-				<img src="/wlogo.png" alt="Jex" className="h-8 w-auto hidden dark:block" />
+				<img src="https://raw.githubusercontent.com/Nexora-Innovations/Jexo/refs/heads/main/.github/logo.png" alt="Jex" className="h-8 w-auto hidden dark:block" />
                 <div className="flex-1">
                   <p className="text-sm font-semibold text-zinc-900 dark:text-white">
                     Jex
@@ -147,13 +147,13 @@ const HelpWidget = () => {
               </div>
               <div className="space-y-1">
                 <a
-                  href="https://docs.Jex.net"
+                  href="https://guide-pi-orpin.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-700 transition-colors text-zinc-700 dark:text-zinc-200"
                 >
                   <IconBook className="w-4 h-4 text-zinc-500" />
-                  <span className="text-sm">Documentation (Coming Soon!)</span>
+                  <span className="text-sm">Documentation </span>
                 </a>
                 <a
                   href="https://github.com/Nexora-Innovations/Jexo"
