@@ -3,7 +3,7 @@ import { loginState } from "../state";
 import { useRecoilState } from "recoil";
 import { Menu } from "@headlessui/react";
 import { useRouter } from "next/router";
-import { IconLogout, IconSettings } from "@tabler/icons";
+import { IconLogout, IconSettings } from "@tabler/icons-react";
 import axios from "axios";
 
 const Topbar: NextPage = () => {

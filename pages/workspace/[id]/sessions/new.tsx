@@ -7,7 +7,7 @@ import Workspace from "@/layouts/workspace";
 import { useRecoilState } from "recoil";
 import { useEffect, useState } from "react";
 import { Listbox } from "@headlessui/react";
-import { IconCheck, IconChevronDown } from "@tabler/icons";
+import { IconCheck, IconChevronDown } from "@tabler/icons-react";
 import { withPermissionCheckSsr } from "@/utils/permissionsManager";
 import * as noblox from "noblox.js";
 import { useRouter } from "next/router";

@@ -2,7 +2,7 @@ import React, { FC, ReactNode, useEffect } from "react";
 import { twMerge } from "tailwind-merge";
 import { Tab, Disclosure, Transition, Listbox } from "@headlessui/react";
 import { GetServerSideProps, NextPage } from "next";
-import { IconCheck, IconChevronDown } from "@tabler/icons";
+import { IconCheck, IconChevronDown } from "@tabler/icons-react";
 import Btn from "@/components/button";
 import { workspacestate } from "@/state";
 import { useForm, FormProvider } from "react-hook-form";

@@ -6,7 +6,7 @@ import Sidebar from "@/components/sidebar";
 import type { LayoutProps } from "@/layoutTypes";
 import axios from 'axios'
 import { Transition } from "@headlessui/react";
-import { IconMenu2 } from "@tabler/icons";
+import { IconMenu2 } from "@tabler/icons-react";
 import { useRecoilState } from "recoil";
 import { workspacestate } from "@/state";
 import { useRouter } from "next/router";

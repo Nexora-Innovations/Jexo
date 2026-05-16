@@ -8,7 +8,7 @@ import { useRecoilState } from "recoil";
 import Button from "@/components/button";
 import { Dialog, Transition } from "@headlessui/react";
 import moment from "moment";
-import { IconChevronRight } from "@tabler/icons";
+import { IconChevronRight } from "@tabler/icons-react";
 import Tooltip from "@/components/tooltip";
 import randomText from "@/utils/randomText";
 import toast, { Toaster } from 'react-hot-toast';

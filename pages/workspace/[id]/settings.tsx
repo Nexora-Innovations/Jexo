@@ -1,6 +1,6 @@
 import type { pageWithLayout } from "@/layoutTypes";
 import { loginState } from "@/state";
-import { IconChevronDown } from "@tabler/icons";
+import { IconChevronDown } from "@tabler/icons-react";
 import Permissions from "@/components/settings/permissions";
 import { Tab, Disclosure, Transition } from "@headlessui/react";
 import Workspace from "@/layouts/workspace";
