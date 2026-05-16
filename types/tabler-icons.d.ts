@@ -1,16 +1,16 @@
 // Ambient module declaration for @tabler/icons v1.x
-// Fixes TypeScript resolution failure caused by the package's exports field
-// not exposing its own type declarations correctly.
-import type { FC, SVGProps } from 'react';
-
+// NOTE: No top-level imports here — that would make this a module file
+// and break the ambient declare module below.
 declare module '@tabler/icons' {
+  import type { FC, SVGProps, CSSProperties } from 'react';
+
   export interface TablerIconProps extends SVGProps<SVGSVGElement> {
     color?: string;
     size?: string | number;
     stroke?: string | number;
     strokeWidth?: string | number;
     className?: string;
-    style?: import('react').CSSProperties;
+    style?: CSSProperties;
   }
 
   export type TablerIcon = FC<TablerIconProps>;
