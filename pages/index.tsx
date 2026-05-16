@@ -13,7 +13,23 @@ import { Toast, Toaster } from "react-hot-toast";
 import { useForm, FormProvider } from "react-hook-form";
 import { useRecoilState } from "recoil";
 import { toast } from "react-hot-toast";
+// pages/index.tsx
+import SEO from "./SEO";
 
+export default function Home() {
+  return (
+    <>
+      <SEO
+        title="Home Page"
+        description="This is the home page."
+        keywords="Management, Moderation, Analytics, Roblox, Group, Bot, Easy, Free, Open, Source, Open-Source, Open Source, Simple, User-Friendly, Dashboard, Web Interface, Customizable, Features, Tools"
+        image="https://raw.githubusercontent.com/Nexora-Innovations/Jexo/refs/heads/main/.github/logo.png"
+        url="https://jexo.vercel.app"
+      />
+      {/* rest of your home page content */}
+    </>
+  );
+}
 const Home: NextPage = () => {
 	const [login, setLogin] = useRecoilState(loginState);
 	const [loading, setLoading] = useState(false);
