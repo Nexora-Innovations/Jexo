@@ -153,7 +153,7 @@ const HelpWidget = () => {
                   className="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-700 transition-colors text-zinc-700 dark:text-zinc-200"
                 >
                   <IconBook className="w-4 h-4 text-zinc-500" />
-                  <span className="text-sm">Documentation</span>
+                  <span className="text-sm">Documentation (Coming Soon!)</span>
                 </a>
                 <a
                   href="https://github.com/Nexora-Innovations/Jexo"
@@ -387,13 +387,21 @@ const HelpWidget = () => {
                     Copyright Notices
                   </Dialog.Title>
                   <div className="mt-4 space-y-4">
-
-                    <div>
-                      <h3 className="text-sm font-medium text-zinc-900 dark:text-white mb-1">
-                        Jex features, enhancements, and modifications:
+					                    <div>
+					<h3 className="text-sm font-medium text-zinc-900 dark:text-white mb-1">
+                        Jex features, enhancements, and modifications
                       </h3>
                       <p className="text-sm text-zinc-500 dark:text-zinc-400">
                         Copyright © 2026 Jex. All rights reserved.
+                      </p>
+                    </div>
+
+                    <div>
+					<h3 className="text-sm font-medium text-zinc-900 dark:text-white mb-1">
+                        Firefli features, enhancements, lighter codebase, and optimizations:
+                      </h3>
+                      <p className="text-sm text-zinc-500 dark:text-zinc-400">
+                        Copyright © 2026 Firefli. All rights reserved.
                       </p>
                     </div>
 
@@ -476,7 +484,11 @@ const HelpWidget = () => {
                         <IconLoader2 className="w-6 h-6 animate-spin text-zinc-500 dark:text-zinc-400" />
                       </div>
                     ) : changelogItems.length === 0 ? (
-                      <p className="text-sm text-zinc-500 dark:text-zinc-400">No changelog entries found.</p>
+                      <p className="text-sm text-zinc-500 dark:text-zinc-400">
+UPDATE OF THE WEEK:
+We just Released we are currently cooking this! Stay tuned! 
+
+					  </p>
                     ) : (
                       <div className="space-y-6">
                         {changelogItems.slice(0, 10).map((item, index) => (
