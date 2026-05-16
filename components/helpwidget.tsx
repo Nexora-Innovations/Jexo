@@ -147,7 +147,7 @@ const HelpWidget = () => {
               </div>
               <div className="space-y-1">
                 <a
-                  href="https://guide-pi-orpin.vercel.app/"
+                  href="https://jex-docs.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-700 transition-colors text-zinc-700 dark:text-zinc-200"
