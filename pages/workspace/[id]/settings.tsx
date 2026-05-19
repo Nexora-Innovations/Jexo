@@ -7,6 +7,7 @@ import Workspace from "@/layouts/workspace";
 import { useRecoilState } from "recoil";
 import { GetServerSideProps } from "next";
 import * as All from "@/components/settings/general"
+import IntegrationsSettings from "@/components/settings/integrations"
 import toast, { Toaster } from 'react-hot-toast';
 import * as noblox from "noblox.js";
 import { withPermissionCheckSsr } from "@/utils/permissionsManager";
@@ -99,6 +100,12 @@ const Settings: pageWithLayout<Props> = ({ users, roles, grouproles }) => {
 				}>
 					Permission
 				</Tab>
+				<Tab className={({ selected }) =>
+					`w-1/2 text-lg rounded-lg border-[#AAAAAA] border leading-5 font-medium text-left p-3 px-2 transition ${selected ? "bg-gray-200 hover:bg-gray-300" : "  hover:bg-gray-300"
+					}`
+				}>
+					Integrations
+				</Tab>
 			</Tab.List>
 			<Tab.Panels>
 				<Tab.Panel>
@@ -124,6 +131,9 @@ const Settings: pageWithLayout<Props> = ({ users, roles, grouproles }) => {
 				</Tab.Panel>
 				<Tab.Panel>
 					<Permissions users={users} roles={roles} grouproles={grouproles}/>
+				</Tab.Panel>
+				<Tab.Panel>
+					<IntegrationsSettings />
 				</Tab.Panel>
 
 			</Tab.Panels>
